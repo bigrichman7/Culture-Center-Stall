@@ -1,0 +1,111 @@
+.listPlace {
+    width: 85%;
+    height: 90%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.generals {
+    overflow: auto;
+    height: 850px;
+    width: 25%;
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.generals::-webkit-scrollbar {
+    width: 30px;
+}
+
+.generals::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+}
+
+.generals::-webkit-scrollbar-thumb {
+    background-color: #d4aa70;
+}
+
+
+.generals li {
+    cursor: pointer;
+    font-size: 22px;
+    padding: 10px 0px;
+    margin: 15px 0 15px 10px;
+    line-height: 35px;
+}
+
+.description {
+    overflow: auto;
+    padding: 40px 40px;
+    height: 810px;
+    width: 65%;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.description::-webkit-scrollbar {
+    width: 30px;
+    border-radius: 0 10px 10px 0;
+}
+
+.description::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 0 10px 10px 0;
+}
+
+.description::-webkit-scrollbar-thumb {
+    background-color: #d4aa70;
+    border-radius: 0 10px 10px 0;
+}
+
+.description .separator {
+    height: 40px;
+}
+
+.portrait {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait img {
+    width: 300px;
+    height: auto;
+    order: 1;
+}
+
+.portrait::after {
+    content: '';
+    height: 20px;
+    width: 100%;
+    order: 1    ;
+}
+
+.portrait figcaption {
+    text-align: center;
+    line-height: 28px;
+    order: 3;
+    font-size: 20px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.description .subtitle {
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.description p {
+    font-size: 24px;
+}
+

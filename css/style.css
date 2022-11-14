@@ -1,0 +1,10 @@
+body {
+    background-image: url(/Изображения/piter-bridges.jpg);
+    background-size: 1280px 1024px;
+}
+
+.place {
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
