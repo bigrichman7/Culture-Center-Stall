@@ -63,7 +63,4 @@ $('.description .rang_content').html(rangs[0]);
 $('.description .medal_content').html(medals[0]);
 $('.description .death_content').html(death[0]);
 
-console.log(images[0].split("||"));
-
-
 });

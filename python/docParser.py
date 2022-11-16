@@ -1,6 +1,7 @@
 import os
 from os import path
 import textract
+import base64
 
 images = []
 name = []
@@ -12,10 +13,15 @@ rang = []
 medals = []
 death = []
 
+#Адрес сервера, на котором хранятся данные
+#Используется для подгрузки изображений
+server_address = "127.0.0.1:5500" 
+
 
 pythonPath = path.dirname(path.abspath(__file__))
 index = pythonPath.find('python')
-mainPath = pythonPath[:index] + "Материал\\Киоск генерал-полицмейстеры\\"
+materialPath = "Материал\\Киоск генерал-полицмейстеры\\"
+mainPath = pythonPath[:index] + materialPath
 
 #Изначально список папок из директории получается отсортированным по алфавиту, т.е. за 1 следует 10, а не 2
 #Метод предназаначен для сортировки по нумерации
@@ -48,9 +54,11 @@ def searchImg(folder):
     mass = []
     for file in os.listdir(mainPath + folder):
         if file.endswith(".jpg"):
-            mass.append(mainPath + folder + "\\" + file + "||")
+            #mass.append(server_address + "\\" + materialPath + folder + "\\" + file + "||")
+            mass.append("..\\" + materialPath + folder + "\\" + file + "||")
         if file.endswith(".png"):
-            mass.append(mainPath + folder + "\\" + file + "||")
+            #mass.append(server_address + "\\" + materialPath + folder + "\\" + file + "||")
+            mass.append("..\\" + materialPath + folder + "\\" + file + "||")
         if file.endswith(".doc"):
             continue
     mass.append("&&")    
