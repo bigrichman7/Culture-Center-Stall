@@ -1,4 +1,81 @@
 body {
     background-image: url(/img/schema.png);
-    
+}
+
+.mappoint {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#point1 {
+    left: 1236px;
+    top: 405px;
+}
+
+#point2 {
+    left: 1819px;
+    top: 859px;
+}
+
+#point3 {
+    left: 1135px;
+    top: 368px;
+}
+
+#point4 {
+    left: 1014px;
+    top: 502px;
+}
+
+#point5 {
+    left: 983px;
+    top: 603px;
+}
+
+#point6 {
+    left: 867px;
+    top: 447px;
+}
+
+#point7 {
+    left: 1198px;
+    top: 39px;
+}
+
+#point8 {
+    left: 1244px;
+    top: 656px;
+}
+
+#point9 {
+    left: 1190px;
+    top: 439px;
+}
+
+#point10 {
+    left: 1234px;
+    top: 732px;
+}
+
+#point11 {
+    left: 70px;
+    top: 783px;
+}
+
+#point12 {
+    left: 1147px;
+    top: 300px;
+}
+
+#point13 {
+    top: 364px;
+    left: 1268px;
+}
+
+#point14 {
+    left: 1240px;
+    top: 305px;
 }
