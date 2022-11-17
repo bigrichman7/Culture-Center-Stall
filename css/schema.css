@@ -6,8 +6,15 @@ body {
     position: absolute;
     height: 18px;
     width: 18px;
-    cursor: pointer;
-    border: 1px solid black;
+    cursor: pointer;    
+}
+
+#note {
+    height: 100px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    visibility: hidden;
 }
 
 #point1 {
