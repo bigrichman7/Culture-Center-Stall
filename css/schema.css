@@ -4,78 +4,78 @@ body {
 
 .mappoint {
     position: absolute;
-    height: 12px;
-    width: 12px;
+    height: 18px;
+    width: 18px;
     cursor: pointer;
     border: 1px solid black;
 }
 
 #point1 {
-    left: 1236px;
-    top: 405px;
+    left: 1218px;
+    top: 418px;
 }
 
 #point2 {
-    left: 1819px;
-    top: 859px;
+    left: 1785px;
+    top: 860px;
 }
 
 #point3 {
-    left: 1135px;
-    top: 368px;
+    left: 1119px;
+    top: 382px;
 }
 
 #point4 {
-    left: 1014px;
-    top: 502px;
+    left: 1001px;
+    top: 512px;
 }
 
 #point5 {
-    left: 983px;
-    top: 603px;
+    left: 971px;
+    top: 611px;
 }
 
 #point6 {
-    left: 867px;
-    top: 447px;
+    left: 859px;
+    top: 459px;
 }
 
 #point7 {
-    left: 1198px;
-    top: 39px;
+    left: 1181px;
+    top: 61px;
 }
 
 #point8 {
-    left: 1244px;
-    top: 656px;
+    left: 1225px;
+    top: 662px;
 }
 
 #point9 {
-    left: 1190px;
-    top: 439px;
+    left: 1173px;
+    top: 452px;
 }
 
 #point10 {
-    left: 1234px;
-    top: 732px;
+    left: 1215px;
+    top: 737px;
 }
 
 #point11 {
-    left: 70px;
-    top: 783px;
+    left: 83px;
+    top: 786px;
 }
 
 #point12 {
-    left: 1147px;
-    top: 300px;
+    left: 1131px;
+    top: 314px;
 }
 
 #point13 {
-    top: 364px;
-    left: 1268px;
+    top: 377px;
+    left: 1249px;
 }
 
 #point14 {
-    left: 1240px;
-    top: 305px;
+    left: 1222px;
+    top: 321px;
 }
