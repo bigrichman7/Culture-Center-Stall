@@ -10,11 +10,17 @@ body {
 }
 
 #note {
-    height: 100px;
-    width: 200px;
+    height: auto;
+    width: auto;
     background-color: white;
     position: absolute;
     visibility: hidden;
+    padding: 15px 15px;
+}
+
+.dead_generals {
+    list-style-type: disc;
+    margin-left: 10px;
 }
 
 #point1 {

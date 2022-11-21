@@ -47,6 +47,7 @@ $( document ).ready(function() {
 
     let globalPoints = [point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11, point12, point13, point14];
 
+    let names = name_python.split(", ");
 
     //Вешаем слушатели на точки
     let points = $(".mappoint");
@@ -59,6 +60,15 @@ $( document ).ready(function() {
             $("#note").css("visibility", "visible");
             $("#note").css("left", (Number(leftPos) + 30) + "px");
             $("#note").css("top",  (Number(topPos) + 30) + "px");
+
+            massPoint = globalPoints[i];
+            let list = "<ul class=\"dead_generals\">";
+            for (let j = 0; j < massPoint.length; j++) {
+                list = list + "<li>" + names[massPoint[j]] + "</li>";
+            }
+            list = list + "</ul>";
+            $("#note").html(list);
+            
         })
 
         $(points[i]).mouseout(function() {
