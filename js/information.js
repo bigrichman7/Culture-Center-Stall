@@ -53,7 +53,6 @@ function getAmountImgs() {
 for (let i = 0; i < generals.length; i++) {
     $(generals[i]).on('click', function(){
         currentGeneral = i;
-        if (getAmountImgs() <= 1) $('.arrows').css('display', 'none'); else $('.arrows').css('display', 'block');
         $('#face').attr('src', (images[i].split("||"))[0]);
         $('.description .name').html(names[i]);
         $('.description .caption').html(captions[i]);
@@ -63,10 +62,10 @@ for (let i = 0; i < generals.length; i++) {
         $('.description .rang_content').html(rangs[i]);
         $('.description .medal_content').html(medals[i]);
         $('.description .death_content').html(death[i]);
+        if (getAmountImgs() <= 1 || getAmountImgs() == undefined) $('.arrows').css('display', 'none'); else $('.arrows').css('display', 'block');
     });
 }
 
-if (getAmountImgs() <= 1) $('.arrows').css('display', 'none'); else $('.arrows').css('display', 'block');
 $('#face').attr('src', (images[0].split("||"))[0]);
 $('.description .name').html(names[0]);
 $('.description .caption').html(captions[0]);
@@ -76,6 +75,7 @@ $('.description .service_content').html(services[0]);
 $('.description .rang_content').html(rangs[0]);
 $('.description .medal_content').html(medals[0]);
 $('.description .death_content').html(death[0]);
+if (getAmountImgs() <= 1 || getAmountImgs() == undefined) $('.arrows').css('display', 'none'); else $('.arrows').css('display', 'block');
 
 
 //Выбрать предыдущий портрет
