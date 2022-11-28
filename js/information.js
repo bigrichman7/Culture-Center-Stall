@@ -40,10 +40,20 @@ for (i = 0; i < captions.length; i++) {
     }
 }
 
+//Получить количество изображений текущего генерал-полицмейстера
+function getAmountImgs() {
+    currentAttr = $('#face').attr('src');
+    if (currentAttr == null || currentAttr == "") return;
+    index = images[currentGeneral].split("||").indexOf(currentAttr);
+    amountImgs = images[currentGeneral].split("||").length - 1; //Последний элемент каждого массива равен ""
+    return amountImgs;
+}
+
 //Вешаем слушатель при нажатии на каждого из генералов
 for (let i = 0; i < generals.length; i++) {
     $(generals[i]).on('click', function(){
         currentGeneral = i;
+        if (getAmountImgs() <= 1) $('.arrows').css('display', 'none'); else $('.arrows').css('display', 'block');
         $('#face').attr('src', (images[i].split("||"))[0]);
         $('.description .name').html(names[i]);
         $('.description .caption').html(captions[i]);
@@ -56,6 +66,7 @@ for (let i = 0; i < generals.length; i++) {
     });
 }
 
+if (getAmountImgs() <= 1) $('.arrows').css('display', 'none'); else $('.arrows').css('display', 'block');
 $('#face').attr('src', (images[0].split("||"))[0]);
 $('.description .name').html(names[0]);
 $('.description .caption').html(captions[0]);
@@ -66,14 +77,6 @@ $('.description .rang_content').html(rangs[0]);
 $('.description .medal_content').html(medals[0]);
 $('.description .death_content').html(death[0]);
 
-//Получить количество изображений текущего генерал-полицмейстера
-function getAmountImgs() {
-    currentAttr = $('#face').attr('src');
-    if (currentAttr == null || currentAttr == "") return;
-    index = images[currentGeneral].split("||").indexOf(currentAttr);
-    amountImgs = images[currentGeneral].split("||").length - 1; //Последний элемент каждого массива равен ""
-    return amountImgs;
-}
 
 //Выбрать предыдущий портрет
 $('#arrowLeft').on('click', function() {
