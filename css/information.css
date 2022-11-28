@@ -64,6 +64,13 @@
     border-radius: 0 10px 10px 0;
 }
 
+.arrows {
+    width: 30px !important;
+    height: 30px !important;
+    margin: 40px;
+    cursor: pointer;
+}
+
 .description .separator {
     height: 40px;
 }

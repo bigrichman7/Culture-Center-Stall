@@ -8,6 +8,8 @@ let rangs = rang_python.split("&&,");
 let medals = medals_python.split("&&,");
 let death = death_python.split("&&,");
 
+let currentGeneral = 0;
+
 $( document ).ready(function() {
 
 function getFace(path) {
@@ -41,6 +43,7 @@ for (i = 0; i < captions.length; i++) {
 //Вешаем слушатель при нажатии на каждого из генералов
 for (let i = 0; i < generals.length; i++) {
     $(generals[i]).on('click', function(){
+        currentGeneral = i;
         $('#face').attr('src', (images[i].split("||"))[0]);
         $('.description .name').html(names[i]);
         $('.description .caption').html(captions[i]);
@@ -62,5 +65,35 @@ $('.description .service_content').html(services[0]);
 $('.description .rang_content').html(rangs[0]);
 $('.description .medal_content').html(medals[0]);
 $('.description .death_content').html(death[0]);
+
+//Получить количество изображений текущего генерал-полицмейстера
+function getAmountImgs() {
+    currentAttr = $('#face').attr('src');
+    if (currentAttr == null || currentAttr == "") return;
+    index = images[currentGeneral].split("||").indexOf(currentAttr);
+    amountImgs = images[currentGeneral].split("||").length - 1; //Последний элемент каждого массива равен ""
+    return amountImgs;
+}
+
+//Выбрать предыдущий портрет
+$('#arrowLeft').on('click', function() {
+    amountImgs = getAmountImgs();
+    if (amountImgs > 1) {
+        index--;
+        if (index < 0) index = amountImgs - 1;
+    } else return;
+    $('#face').attr('src', (images[currentGeneral].split("||"))[index]);
+});
+
+//Выбрать следующий портрет
+$('#arrowRight').on('click', function() {
+    amountImgs = getAmountImgs();
+    if (amountImgs > 1) {
+        index++;
+        if (index >= amountImgs) index = 0;
+    } else return;
+    $('#face').attr('src', (images[currentGeneral].split("||"))[index]);
+})
+
 
 });
