@@ -125,29 +125,36 @@ name_js.write(''.join(('name_python = \'', ''.join(name).replace('\'', '').repla
 name_js.close()
 
 caption_js = open('js\\data\\caption_python.js', 'w+', encoding="utf-8")
-caption_js.write("caption_python = \'" + " ".join((str(caption).replace('\\r', '').replace('\\n', '').replace('\', \'', ', ')).split()).replace('\'', '').replace('[', '').replace(']', '') + "\'")
+#caption_js.write("caption_python = \'" + " ".join((str(caption).replace('\\r', '').replace('\\n', '').replace('\', \'', ', ')).split()).replace('\'', '').replace('[', '').replace(']', '') + "\'")
+caption_js.write("caption_python = \'" + " ".join((str(caption).replace('\', \'', ', ')).split()).replace('\'', '').replace('[', '').replace(']', '') + "\'")
 caption_js.close()
 
 origin_js = open('js\\data\\origin_python.js', 'w+', encoding="utf-8")
-origin_js.write('origin_python = \'' + " ".join(str(origin).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+#origin_js.write('origin_python = \'' + " ".join(str(origin).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+origin_js.write('origin_python = \'' + " ".join(str(origin).split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
 origin_js.close()
 
 education_js = open('js\\data\\education_python.js', 'w+', encoding="utf-8")
-education_js.write('education_python = \'' + " ".join(str(education).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+#education_js.write('education_python = \'' + " ".join(str(education).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+education_js.write('education_python = \'' + " ".join(str(education).split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
 education_js.close()
 
 service_js = open('js\\data\\service_python.js', 'w+', encoding="utf-8")
-service_js.write('service_python = \'' + " ".join(str(service).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+#service_js.write('service_python = \'' + " ".join(str(service).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+service_js.write('service_python = \'' + " ".join(str(service).split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
 service_js.close()
 
 rang_js = open('js\\data\\rang_python.js', 'w+', encoding="utf-8")
-rang_js.write('rang_python = \'' + " ".join(str(rang).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+#rang_js.write('rang_python = \'' + " ".join(str(rang).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+rang_js.write('rang_python = \'' + " ".join(str(rang).split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
 rang_js.close()
 
 medals_js = open('js\\data\\medals_python.js', 'w+', encoding="utf-8")
-medals_js.write('medals_python = \'' + " ".join(str(medals).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+#medals_js.write('medals_python = \'' + " ".join(str(medals).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+medals_js.write('medals_python = \'' + " ".join(str(medals).split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
 medals_js.close()
 
 death_js = open('js\\data\\death_python.js', 'w+', encoding="utf-8")
-death_js.write('death_python = \'' + " ".join(str(death).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+#death_js.write('death_python = \'' + " ".join(str(death).replace('\\r', '').replace('\\n', '').split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
+death_js.write('death_python = \'' + " ".join(str(death).split()).replace('\'', '').replace('[', '').replace(']', '') + '\'')
 death_js.close()
