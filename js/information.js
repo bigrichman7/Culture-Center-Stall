@@ -10,7 +10,6 @@ let death = death_python.split("&&,");
 
 let currentGeneral = 0;
 
-
 $( document ).ready(function() {
 
     //Заполняем список генералов
@@ -58,7 +57,7 @@ $( document ).ready(function() {
             mass[i] = str.replace('<br>', "", 1);
         }
         return mass;
-    }
+    } 
     
     origins = transfer(origins);
     educations = transfer(educations);
@@ -67,6 +66,8 @@ $( document ).ready(function() {
     rangs = transfer(rangs);
     medals = transfer(medals);
     death = transfer(death);
+
+    console.log(services);
 
     //Получить количество изображений текущего генерал-полицмейстера
     function getAmountImgs() {
