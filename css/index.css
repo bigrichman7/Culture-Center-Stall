@@ -1,20 +1,32 @@
+@font-face {
+    font-family: 'Zen Antique';
+    src: url(/fonts/ZenAntique-Regular.ttf);
+}
+
 .mainPlace {
     width: 800px;
     text-align: center;
+    margin-top: 150px;
 }
 
-h1 {
-    font-size: 28px;
+h1, h3 {
+    font-size: 40px;
     font-weight: 600;
     line-height: 36px;
+    font-family: 'Zen Antique', serif !important;
+    line-height:46px;
+}
+
+h3 {
+    font-size: 22px;
 }
 
 .buttonPlace {
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .mainButton {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     margin: 0 50px;
     width: 200px;
