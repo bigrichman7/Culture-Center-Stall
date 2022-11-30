@@ -3,10 +3,36 @@
     src: url(/fonts/ZenAntique-Regular.ttf);
 }
 
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.logo-mvd {
+    width: 150px;
+    height: auto;
+}
+
+.logo-gu {
+    width: auto;
+    height: 140px;
+}
+
+.logo-museam {
+    height: 115px;
+    width: auto;
+    padding-bottom: 13px;
+}
+
+.text-between-logos {
+    margin: 0 30px;
+}
+
 .mainPlace {
-    width: 800px;
+    width: 900px;
     text-align: center;
-    margin-top: 150px;
+    margin-top:140px;
 }
 
 h1, h3 {
@@ -22,7 +48,7 @@ h3 {
 }
 
 .buttonPlace {
-    margin-top: 70px;
+    margin-top: 10px;
 }
 
 .mainButton {
