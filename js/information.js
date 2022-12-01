@@ -10,6 +10,7 @@ let death = death_python.split("&&,");
 
 let currentGeneral = 0;
 
+
 $( document ).ready(function() {
 
     //Заполняем список генералов
@@ -80,8 +81,6 @@ $( document ).ready(function() {
     medals = transfer(medals);
     death = transfer(death);
 
-    console.log(services);
-
     //Получить количество изображений текущего генерал-полицмейстера
     function getAmountImgs() {
         currentAttr = $('#face').attr('src');
@@ -89,6 +88,11 @@ $( document ).ready(function() {
         index = images[currentGeneral].split("||").indexOf(currentAttr);
         amountImgs = images[currentGeneral].split("||").length - 1; //Последний элемент каждого массива равен ""
         return amountImgs;
+    }
+
+    function refresh() {
+        $('.portrait').css('display', 'flex');
+        $('.portrait-separator').css('display', 'none');
     }
 
     //Вешаем слушатель при нажатии на каждого из генералов
@@ -106,8 +110,14 @@ $( document ).ready(function() {
             $('.description .death_content').html(death[i]);
             if (getAmountImgs() <= 1 || getAmountImgs() == undefined) {
                 $('.arrows').css('display', 'none');
+                refresh();
+                if (getAmountImgs() == undefined) {
+                    $('.portrait-separator').css('display', 'block');
+                    $('.portrait').css('display', 'block');
+                }
             } else {
                 $('.arrows').css('display', 'block');
+                refresh();
             }
         });
     }
