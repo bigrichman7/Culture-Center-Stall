@@ -23,6 +23,19 @@ $( document ).ready(function() {
 
     let generals = $('li');
 
+    //Удаляем знаки && у крайнего генерала в списке
+    function cleaner(mass) {
+        mass[mass.length-1] = mass[mass.length-1].replace("&&", '');
+        return mass;
+    }
+    captions = cleaner(captions);
+    origins = cleaner(origins);
+    educations = cleaner(educations);
+    services = cleaner(services);
+    rangs = cleaner(rangs);
+    medals = cleaner(medals);
+    death = cleaner(death);
+
     //Удаляем первый символ из caption, если он равен " "
     for (i = 0; i < captions.length; i++) {
         if ((captions[i])[0] == " ") {
@@ -91,7 +104,11 @@ $( document ).ready(function() {
             $('.description .rang_content').html(rangs[i]);
             $('.description .medal_content').html(medals[i]);
             $('.description .death_content').html(death[i]);
-            if (getAmountImgs() <= 1 || getAmountImgs() == undefined) $('.arrows').css('display', 'none'); else $('.arrows').css('display', 'block');
+            if (getAmountImgs() <= 1 || getAmountImgs() == undefined) {
+                $('.arrows').css('display', 'none');
+            } else {
+                $('.arrows').css('display', 'block');
+            }
         });
     }
 
@@ -104,7 +121,11 @@ $( document ).ready(function() {
     $('.description .rang_content').html(rangs[0]);
     $('.description .medal_content').html(medals[0]);
     $('.description .death_content').html(death[0]);
-    if (getAmountImgs() <= 1 || getAmountImgs() == undefined) $('.arrows').css('display', 'none'); else $('.arrows').css('display', 'block');
+    if (getAmountImgs() <= 1 || getAmountImgs() == undefined) {
+        $('.arrows').css('display', 'none');
+    } else {
+        $('.arrows').css('display', 'block');
+    }
 
 
     //Выбрать предыдущий портрет
