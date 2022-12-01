@@ -15,8 +15,8 @@
     background-color: white;
     padding: 20px 20px;
     border-radius: 10px 5px 5px 10px;
-    background-color: rgba(230, 142, 35, 0.484);
-    border: 2px solid rgba(255, 142, 0, 0.5);
+    background-color: #798bb620;
+    border: 2px solid rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0px 0px 4px 3px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 0px 4px 3px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 0px 4px 3px rgba(34, 60, 80, 0.2);
@@ -27,11 +27,11 @@
 }
 
 .generals::-webkit-scrollbar-track {
-    background-color: #e4e4e4;
+    background-color: #d9d9d9;
 }
 
 .generals::-webkit-scrollbar-thumb {
-    background-color: rgba(217, 119, 0, 0.786);	;
+    background-color: #959595;	;
 }
 
 
@@ -48,10 +48,9 @@
     padding: 40px 40px;
     height: 83vmin;
     width: 64.5%;
-    background-color: white;
     border-radius: 5px 10px 10px 5px;
-    border: 2px solid rgba(255, 142, 0, 0.5);
-    background-color: rgba(230, 142, 35, 0.415);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: #798bb620;
     -webkit-box-shadow: 0px 0px 4px 3px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 0px 4px 3px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 0px 4px 3px rgba(34, 60, 80, 0.2);
@@ -63,12 +62,12 @@
 }
 
 .description::-webkit-scrollbar-track {
-    background-color: #e4e4e4;
+    background-color: #d9d9d9;
     border-radius: 0 10px 10px 0;
 }
 
 .description::-webkit-scrollbar-thumb {
-    background-color: rgba(217, 119, 0, 0.786);
+    background-color: #959595;
     border-radius: 0 10px 10px 0;
 }
 

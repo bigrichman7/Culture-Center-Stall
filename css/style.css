@@ -13,15 +13,19 @@
     src: url(/fonts/alumni/AlumniSans-SemiBold.ttf);
 }
 
+@font-face {
+    font-family: 'Alumni Sans Bold';
+    src: url(/fonts/alumni/AlumniSans-Bold.ttf);
+}
+
 
 * {
     font-family: "Alumni Sans", sans-serif !important;
 }
 
-/* .informationBODY, .mainBODY {
-    background-image: url(/img/piter-bridges.jpg);
-    
-} */
+.informationBODY, .mainBODY {
+    background-color: rgb(199, 199, 199);
+}
 
 .place {
     margin: 0 auto;
