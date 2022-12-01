@@ -63,7 +63,6 @@
     background-repeat: no-repeat;
     background-size: 300px, 300px;
     background-position: 140px 70px, 450px 70px;
-    background-position: fixed, fixed !important;
 }
 
 .description::-webkit-scrollbar {
