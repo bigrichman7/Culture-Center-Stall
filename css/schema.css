@@ -18,11 +18,23 @@ body {
     position: absolute;
     visibility: hidden;
     padding: 15px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.458);
+    border-radius: 10px;
 }
 
 .dead_generals {
     list-style-type: disc;
     margin-left: 10px;
+}
+
+.dead_generals li {
+    font-size: 22px;
+}
+
+h6 {
+    font-family: 'Alumni Sans Bold', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 #point1 {

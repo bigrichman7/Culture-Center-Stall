@@ -46,6 +46,7 @@ $( document ).ready(function() {
     let point14 = [73, 74];     
 
     let globalPoints = [point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11, point12, point13, point14];
+    let namePoints = ['Александро-Невская лавра', 'Церковь Святого Покрова', 'Смоленское православное кладбище', 'Сергиева пустынь', 'Церковь Тихвинской Божией Матери', 'Свято-Троицкое кладбище', 'Вартемягская Софийская Церковь', 'кладбище села Большое Кузьмино', 'Новодевичье кладбище', 'Казанское кладбище', 'д. Васакара', 'Серафимовское кладбище', 'Большеохтинское кладбище', 'Богословское кладбище'];
 
     let names = name_python.split(", ");
 
@@ -62,7 +63,7 @@ $( document ).ready(function() {
             $("#note").css("top",  (Number(topPos) + 30) + "px");
 
             massPoint = globalPoints[i];
-            let list = "<ul class=\"dead_generals\">";
+            let list = "<h6>" + namePoints[i] + "</h6>" + "<ul class=\"dead_generals\">";
             for (let j = 0; j < massPoint.length; j++) {
                 list = list + "<li>" + names[massPoint[j]] + "</li>";
             }
