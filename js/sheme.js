@@ -58,10 +58,6 @@ $( document ).ready(function() {
             leftPos = $(points[i]).css("left").replace("px", "");
             topPos = $(points[i]).css("top").replace("px", "");
 
-            $("#note").css("visibility", "visible");
-            $("#note").css("left", (Number(leftPos) + 30) + "px");
-            $("#note").css("top",  (Number(topPos) + 30) + "px");
-
             massPoint = globalPoints[i];
             let list = "<h6>" + namePoints[i] + "</h6>" + "<ul class=\"dead_generals\">";
             for (let j = 0; j < massPoint.length; j++) {
@@ -69,16 +65,23 @@ $( document ).ready(function() {
             }
             list = list + "</ul>";
             $("#note").html(list);
+
+            $("#note").css("visibility", "visible");
+
+            if ((Number(leftPos) + Number($("#note").css('width').replace('px', ''))) > 1916) 
+                $("#note").css("left", (Number(leftPos) - Number($("#note").css('width').replace('px', '')) + 40) + "px");
+            else
+                $("#note").css("left", (Number(leftPos) + 30) + "px");
+            
+            if ((Number(topPos) + Number($("#note").css('height').replace('px', ''))) > 969)
+                $("#note").css("top",  (Number(topPos) - Number($("#note").css('height').replace('px', '')) - 30) + "px");
+            else
+                $("#note").css("top",  (Number(topPos) + 30) + "px");
             
         })
 
         $(points[i]).mouseout(function() {
-            leftPos = $(points[i]).css("left").replace("px", "");
-            topPos = $(points[i]).css("top").replace("px", "");
-
             $("#note").css("visibility", "hidden");
-            $("#note").css("left", (Number(leftPos) + 30) + "px");
-            $("#note").css("top",  (Number(topPos) + 30) + "px");
         })
     }
 
