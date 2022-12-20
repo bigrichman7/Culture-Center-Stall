@@ -1,3 +1,27 @@
-@media screen and (max-width: 2560px) {
-    .description {}
+@media (max-width: 1555px) {
+    .desktop {display: none;}
+    .mobile {display: block;}
+    .generals {
+        height: auto;
+        width: 500px;
+        border-radius: 7px;
+    }
+    select .mobile {
+        width: 800px;
+    }
+    .description {
+        border-radius: 7px;
+    }
+    .description::-webkit-scrollbar {
+        width: 20px;
+        border-radius: 0 7px 7px 0;
+    }
+    .description::-webkit-scrollbar-thumb {
+        border-radius: 0 7px 7px 0;
+    }
+}
+
+@media (min-width: 1556px) {
+    .desktop {display: block;}
+    .mobile {display: none;}
 }
