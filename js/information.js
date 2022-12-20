@@ -24,8 +24,10 @@ $( document ).ready(function() {
     //Запоняем список для тега select для мобильных устройств
     $(".generals select").append(function(){
         let str = "";
+        let k = 0;
         names.forEach(general => {
-            str = str + "<option>" + general + "</option>";
+            str = str + "<option value='" + k + "'>" + general + "</option>";
+            k++;
         });
         return str; 
     });
