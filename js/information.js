@@ -21,8 +21,27 @@ $( document ).ready(function() {
         });
         return str; 
     });
+    //Запоняем список для тега select для мобильных устройств
+    $(".generals select").append(function(){
+        let str = "";
+        let k = 0;
+        names.forEach(general => {
+            str = str + "<option value='" + k + "'>" + general + "</option>";
+            k++;
+        });
+        return str; 
+    });
 
-    let generals = $('li');
+    let generals;
+    if (window.innerWidth > 1555) {
+        generals = $('li');
+        console.log(generals);
+    } 
+    else {
+        generals = $('option');
+        console.log(generals);
+    }
+    
 
     //Удаляем знаки && у крайнего генерала в списке
     function cleaner(mass) {
