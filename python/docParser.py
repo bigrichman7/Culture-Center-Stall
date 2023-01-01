@@ -1,7 +1,8 @@
 import os
 from os import path
 import textract
-import base64
+import shutil
+import os
 
 images = []
 name = []
@@ -22,6 +23,9 @@ pythonPath = path.dirname(path.abspath(__file__))
 index = pythonPath.find('python')
 materialPath = "Материал\\Киоск генерал-полицмейстеры\\"
 mainPath = pythonPath[:index] + materialPath
+
+globalCounter = 1 #Используется для создания папок в директории img/generals
+localCounter = 0 #Используется для создания имен изображений в каждой отдельной папке
 
 #Изначально список папок из директории получается отсортированным по алфавиту, т.е. за 1 следует 10, а не 2
 #Метод предназаначен для сортировки по нумерации
@@ -51,17 +55,34 @@ def searchDoc(folder):
 
 #Возвращает имя файла .jpg или .png в указанной папке
 def searchImg(folder):
+    global globalCounter
+    global localCounter
+    global pythonPath
+    newpath = pythonPath + "\..\img\generals\\" + str(globalCounter)
+    if (os.path.isdir(newpath)):
+        shutil.rmtree(newpath)
+    else:
+        os.mkdir(newpath)
     mass = []
     for file in os.listdir(mainPath + folder):
+        path = "..\img\generals\\" + str(globalCounter) + "\\" + str(localCounter)
         if file.endswith(".jpg"):
-            #mass.append(server_address + "\\" + materialPath + folder + "\\" + file + "||")
-            mass.append("..\\" + materialPath + folder + "\\" + file + "||")
+            shutil.copy(mainPath + folder + "\\" + file, newpath + "\\" + str(localCounter) + ".jpg")
+            mass.append(path + ".jpg" + "||")
+            #mass.append("..\\" + materialPath + folder + "\\" + file + "||")
+            localCounter = localCounter + 1
         if file.endswith(".png"):
-            #mass.append(server_address + "\\" + materialPath + folder + "\\" + file + "||")
-            mass.append("..\\" + materialPath + folder + "\\" + file + "||")
+            shutil.copy(mainPath + folder + "\\" + file, newpath + "\\" + str(localCounter) + ".png")
+            mass.append(path + ".png" + "||")
+            localCounter = localCounter + 1
+            #mass.append("..\\" + materialPath + folder + "\\" + file + "||")
         if file.endswith(".doc"):
             continue
-    mass.append("&&")    
+    mass.append("&&")
+
+    
+    globalCounter = globalCounter + 1
+    localCounter = 0
     
     return mass
 
@@ -100,6 +121,7 @@ sortByNumber()
 
 
 #Считывает содержимое файлов формата .doc в переменную text
+#Считывает содержимое файлов формата .jpg и .png в переменную images
 for folder in folders:
     if len(searchDoc(folder)) != 0 :
         name.append(searchDoc(folder))
