@@ -1,4 +1,4 @@
-@media (max-width: 1555px) {
+@media (max-width: 1300px) {
     .desktop {display: none;}
     .mobile {display: block;}
     .generals {
@@ -21,7 +21,7 @@
     }
 }
 
-@media (min-width: 1556px) {
+@media (min-width: 1301px) {
     .desktop {display: block;}
     .mobile {display: none;}
 }

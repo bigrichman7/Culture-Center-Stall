@@ -33,7 +33,7 @@ $( document ).ready(function() {
     });
 
     let generals;
-    if (window.innerWidth > 1555) {
+    if (window.innerWidth > 1300) {
         generals = $('li');
         console.log(generals);
     } 
