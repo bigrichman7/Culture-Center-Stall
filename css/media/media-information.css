@@ -6,6 +6,7 @@
         width: 100%;
         border-radius: 7px;
         margin-right: 0;
+        margin-bottom: 10px;
     }
     #list-mobile {
         width: 100%;
@@ -22,6 +23,26 @@
     }
     .description::-webkit-scrollbar-thumb {
         border-radius: 0 7px 7px 0;
+    }
+
+    .portrait img {
+        width: 80%;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .caption {
+        font-size: 18px;
+    }
+
+    .description .subtitle {
+        font-size: 22px;
+    }
+
+    .description p {
+        font-size: 20px;
     }
 }
 
