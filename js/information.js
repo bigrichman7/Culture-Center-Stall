@@ -32,14 +32,15 @@ $( document ).ready(function() {
         return str; 
     });
 
+
     let generals;
     if (window.innerWidth > 1300) {
         generals = $('li');
-        console.log(generals);
+        listenerForDesktop();
     } 
     else {
         generals = $('option');
-        console.log(generals);
+        listenerForMobile();
     }
     
 
@@ -114,31 +115,60 @@ $( document ).ready(function() {
         $('.portrait-separator').css('display', 'none');
     }
 
-    //Вешаем слушатель при нажатии на каждого из генералов
-    for (let i = 0; i < generals.length; i++) {
-        $(generals[i]).on('click', function(){
-            currentGeneral = i;
-            $('#face').attr('src', (images[i].split("||"))[0]);
-            $('.description .name').html(names[i]);
-            $('.description .caption').html(captions[i]);
-            $('.description .origin_content').html(origins[i]);
-            $('.description .education_content').html(educations[i]);
-            $('.description .service_content').html(services[i]);
-            $('.description .rang_content').html(rangs[i]);
-            $('.description .medal_content').html(medals[i]);
-            $('.description .death_content').html(death[i]);
-            if (getAmountImgs() <= 1 || getAmountImgs() == undefined) {
-                $('.arrows').css('display', 'none');
-                refresh();
-                if (getAmountImgs() == undefined) {
-                    $('.portrait-separator').css('display', 'block');
-                    $('.portrait').css('display', 'block');
+    //Вешаем слушатель при изменении параметра option в мобильной версии
+    function listenerForMobile () {
+        $('#list-mobile').change(function () {
+            $('#face').attr('src', (images[$(this).val()].split("||"))[0]);
+                $('.description .name').html(names[$(this).val()]);
+                $('.description .caption').html(captions[$(this).val()]);
+                $('.description .origin_content').html(origins[$(this).val()]);
+                $('.description .education_content').html(educations[$(this).val()]);
+                $('.description .service_content').html(services[$(this).val()]);
+                $('.description .rang_content').html(rangs[$(this).val()]);
+                $('.description .medal_content').html(medals[$(this).val()]);
+                $('.description .death_content').html(death[$(this).val()]);
+                if (getAmountImgs() <= 1 || getAmountImgs() == undefined) {
+                    $('.arrows').css('display', 'none');
+                    refresh();
+                    if (getAmountImgs() == undefined) {
+                        $('.portrait-separator').css('display', 'block');
+                        $('.portrait').css('display', 'block');
+                    }
+                } else {
+                    $('.arrows').css('display', 'block');
+                    refresh();
                 }
-            } else {
-                $('.arrows').css('display', 'block');
-                refresh();
-            }
         });
+    }
+    
+
+    //Вешаем слушатель при нажатии на каждого из генералов
+    function listenerForDesktop() {
+        for (let i = 0; i < generals.length; i++) {
+            $(generals[i]).on('click', function(){
+                currentGeneral = i;
+                $('#face').attr('src', (images[i].split("||"))[0]);
+                $('.description .name').html(names[i]);
+                $('.description .caption').html(captions[i]);
+                $('.description .origin_content').html(origins[i]);
+                $('.description .education_content').html(educations[i]);
+                $('.description .service_content').html(services[i]);
+                $('.description .rang_content').html(rangs[i]);
+                $('.description .medal_content').html(medals[i]);
+                $('.description .death_content').html(death[i]);
+                if (getAmountImgs() <= 1 || getAmountImgs() == undefined) {
+                    $('.arrows').css('display', 'none');
+                    refresh();
+                    if (getAmountImgs() == undefined) {
+                        $('.portrait-separator').css('display', 'block');
+                        $('.portrait').css('display', 'block');
+                    }
+                } else {
+                    $('.arrows').css('display', 'block');
+                    refresh();
+                }
+            });
+        };
     }
 
     $('#face').attr('src', (images[0].split("||"))[0]);
