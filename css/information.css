@@ -12,7 +12,7 @@
 .generals {
     overflow: auto;
     height: 88.5vmin;
-    max-width: 370px;
+    /* max-width: 370px; */
     width: 24.5%;
     background-color: white;
     padding: 20px 20px;
@@ -54,7 +54,7 @@
     overflow: auto;
     padding: 40px 40px;
     height: 83vmin;
-    max-width: 850px;
+    /* max-width: 850px; */
     width: 64.5%;
     border-radius: 5px 10px 10px 5px;
     border: 2px solid rgba(0, 0, 0, 0.5);

@@ -1,4 +1,4 @@
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .desktop {display: none;}
     .mobile {display: block;}
     .generals, .description {
@@ -92,7 +92,99 @@
     }
 }
 
-@media (min-width: 1301px) {
+@media (min-width: 500px) {
+    #list-mobile {
+        font-size: 25px;
+    }
+
+    .name {
+        font-size: 29px;
+    }
+
+    .caption {
+        font-size: 23px;
+    }
+
+    .description .subtitle {
+        font-size: 27px;
+    }
+
+    .description p {
+        font-size: 25px;
+    }
+
+    .icons {
+        font-size: 25px;
+        padding: 6px 10px;
+    }
+
+}
+
+@media (min-width: 600px) {
+    .portrait img {
+        width: 65%;
+    }
+}
+
+@media (min-width: 750px) {
+    #list-mobile {
+        font-size: 28px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .caption {
+        font-size: 26px;
+    }
+
+    .description .subtitle {
+        font-size: 30px;
+    }
+
+    .description p {
+        font-size: 28px;
+    }
+
+    .icons {
+        font-size: 28px;
+        padding: 6px 10px;
+    }
+}
+
+@media (min-width: 850px) {
+    .portrait img {
+        width: 45%;
+    }
+
+    #list-mobile {
+        font-size: 31px;
+    }
+
+    .name {
+        font-size: 35px;
+    }
+
+    .caption {
+        font-size: 29px;
+    }
+
+    .description .subtitle {
+        font-size: 33px;
+    }
+
+    .description p {
+        font-size: 31px;
+    }
+
+    .icons {
+        font-size: 31px;
+        padding: 6px 10px;
+    }
+}
+
+@media (min-width: 1401px) {
     .desktop {display: block;}
     .mobile {display: none;}
 }
