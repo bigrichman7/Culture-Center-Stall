@@ -17,6 +17,11 @@
         background-color: #798bb601;
         font-size: 20px;
     }
+
+    .place {
+        margin-top: 10px;
+    }
+
     .description::-webkit-scrollbar {
         width: 20px;
         border-radius: 0 7px 7px 0;
@@ -43,6 +48,47 @@
 
     .description p {
         font-size: 20px;
+    }
+
+    .icons-container {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icons {
+        position: static;
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #map a, #home a{
+        display: flex;
+        align-items: center;
+    }
+
+    .icons a {
+        text-decoration: none;
+        color: black;
+        opacity: 90%;
+    }
+
+    .icon-text {
+        display: inline;
+        padding-left: 10px;        
+    }
+
+    .icon-text:active {
+        text-decoration: none;
+    }
+
+    .icons img {
+        width: 30px;
+        height: 30px;
+        padding: 3px;
     }
 }
 

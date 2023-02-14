@@ -51,8 +51,16 @@
     padding: 8px;
 }
 
+.icon-text {
+    display: none;
+}
+
 #home {
     top: 25px;
+}
+
+#map {
+    opacity: 100%;
 }
 
 #map, #hat {
