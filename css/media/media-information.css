@@ -1,16 +1,20 @@
 @media (max-width: 1300px) {
     .desktop {display: none;}
     .mobile {display: block;}
-    .generals {
+    .generals, .description {
         height: auto;
-        width: 500px;
+        width: 100%;
         border-radius: 7px;
+        margin-right: 0;
     }
-    select .mobile {
-        width: 800px;
-    }
-    .description {
-        border-radius: 7px;
+    #list-mobile {
+        width: 100%;
+        display: block;
+        color: #444;
+        margin: 0;
+        border: none;
+        background-color: #798bb601;
+        font-size: 20px;
     }
     .description::-webkit-scrollbar {
         width: 20px;
