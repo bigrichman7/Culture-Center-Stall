@@ -187,4 +187,10 @@
 @media (min-width: 1401px) {
     .desktop {display: block;}
     .mobile {display: none;}
+    .portrait img {
+        width: 330px;
+    }
+    .description {
+        background-position: 210px 70px, 520px 70px;
+    }
 }
