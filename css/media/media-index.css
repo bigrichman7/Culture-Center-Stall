@@ -1,0 +1,153 @@
+@media (min-width: 10px) {
+    .logos-desktop {
+        display: none;
+    }
+
+    .mainPlace {
+        width: auto;
+        margin-top: 40px;
+    }
+
+    .logos {
+        display: block;
+        padding: 0 30px;
+    }
+
+    .logos-mobile-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text-logos {
+        display: block;
+    }
+
+    .logo-museam {
+        height: 78px;
+        width: auto;
+        padding-top: 6px;
+        
+    }
+    
+    .logo-gu {
+        width: auto;
+        height: 90px;
+    }
+
+    .mainButton {
+        background-size: 50px 50px;
+        font-size: 16px;
+        padding: 0 0 0 80px;
+        width: 190px;
+        height: 70px;
+        background-position: 15px 10px;
+        margin: 0;
+        text-align: left;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 13px;
+    }
+
+    .buttonPlace a {
+        text-decoration: none;
+    }
+
+    h1, h3 {
+        line-height: 32px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    h3 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 600px) {
+    h1, h3 {
+        line-height: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 25px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .logos-mobile {
+        display: none;
+    }
+
+    .logos-desktop {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-museam {
+        height: 78px;
+        width: auto;
+        padding-top: 6px;
+        padding-left: 30px;
+        
+    }
+    
+    .logo-gu {
+        width: auto;
+        height: 90px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 850px) {
+    .logos-mobile {
+        display: none;
+    }
+
+    .logos-desktop {
+        display: flex;
+    }
+}
+
+@media (min-width: 1000px) {
+    h1, h3 {
+        line-height: 40px;
+    }
+    h1 {
+        font-size: 36px;
+        
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .logo-museam {
+        height: 98px;
+        width: auto;
+        padding-top: 6px;
+        padding-left: 50px;
+        
+    }
+    
+    .logo-gu {
+        width: auto;
+        height: 110px;
+        padding-right: 50px;
+    }
+
+    .buttonPlace {
+        display: flex;
+        justify-content: center;
+    }
+    .mainButton {
+        margin-right: 30px;
+        margin-top: 15px;
+        font-size: 22px;
+        width: 220px;
+    }
+}
