@@ -69,14 +69,14 @@ $( document ).ready(function() {
             $("#note").css("visibility", "visible");
 
             if ((Number(leftPos) + Number($("#note").css('width').replace('px', ''))) > 1916) 
-                $("#note").css("left", (Number(leftPos) - Number($("#note").css('width').replace('px', '')) + 40) + "px");
+                $("#note").css("left", (Number(leftPos) - Number($("#note").css('width').replace('px', '')) + 25) + "px");
             else
-                $("#note").css("left", (Number(leftPos) + 30) + "px");
+                $("#note").css("left", (Number(leftPos) + 15) + "px");
             
             if ((Number(topPos) + Number($("#note").css('height').replace('px', ''))) > 969)
-                $("#note").css("top",  (Number(topPos) - Number($("#note").css('height').replace('px', '')) - 30) + "px");
+                $("#note").css("top",  (Number(topPos) - Number($("#note").css('height').replace('px', '')) - 15) + "px");
             else
-                $("#note").css("top",  (Number(topPos) + 30) + "px");
+                $("#note").css("top",  (Number(topPos) + 15) + "px");
             
         })
 
@@ -84,6 +84,15 @@ $( document ).ready(function() {
             $("#note").css("visibility", "hidden");
         })
     }
+
+    //Вешаем слушатель на #note
+    $("#note").mouseover(function() {
+        $("#note").css("visibility", "visible");
+    });
+
+    $("#note").mouseout(function() {
+        $("#note").css("visibility", "hidden");
+    })
 
 
 
