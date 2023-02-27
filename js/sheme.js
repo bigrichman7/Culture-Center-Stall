@@ -61,7 +61,7 @@ $( document ).ready(function() {
             massPoint = globalPoints[i];
             let list = "<h6>" + namePoints[i] + "</h6>" + "<ul class=\"dead_generals\">";
             for (let j = 0; j < massPoint.length; j++) {
-                list = list + "<li>" + names[massPoint[j]] + "</li>";
+                list = list + "<li><a href='information.html' id=n" + massPoint[j] + ">" + names[massPoint[j]] + "</a></li>";
             }
             list = list + "</ul>";
             $("#note").html(list);
@@ -85,7 +85,7 @@ $( document ).ready(function() {
         })
     }
 
-    //Вешаем слушатель на #note
+    //Вешаем слушатели на #note
     $("#note").mouseover(function() {
         $("#note").css("visibility", "visible");
     });
@@ -94,6 +94,10 @@ $( document ).ready(function() {
         $("#note").css("visibility", "hidden");
     })
 
-
+    //Слушатель для записи ключа в Local storage при нажатии на имя (!НЕ РАБОТАЕТ)
+    // $('#n36').mouseover(function() {
+    //     sessionStorage.setItem('id', this.id);
+    //     console.log(sessionStorage.getItem('id'));
+    // });  
 
 })

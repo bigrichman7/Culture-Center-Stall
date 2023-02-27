@@ -13,6 +13,8 @@ let currentGeneral = 0;
 
 $( document ).ready(function() {
 
+    console.log(sessionStorage.getItem('id'));
+
     //Заполняем список генералов
     $(".generals ul").append(function(){
         let str = "";

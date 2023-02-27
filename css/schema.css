@@ -38,6 +38,18 @@ h6 {
     font-weight: 600;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: rgb(63, 63, 63);
+}
+
 #point1 {
     left: 1218px;
     top: 418px;
