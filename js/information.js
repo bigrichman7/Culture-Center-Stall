@@ -162,7 +162,13 @@ $( document ).ready(function() {
                 $('.description .service_content').html(services[i]);
                 $('.description .rang_content').html(rangs[i]);
                 $('.description .medal_content').html(medals[i]);
-                $('.description .death_content').html(death[i]);
+                if (death[i] == ' \n') {
+                    $('.description .death').css('display', 'none')
+                } else {
+                    $('.description .death').css('display', 'block');
+                    $('.description .death_content').html(death[i]);
+                }
+                console.log(death[i]);
                 if (getAmountImgs() <= 1 || getAmountImgs() == undefined) {
                     $('.arrows').css('display', 'none');
                     refresh();
