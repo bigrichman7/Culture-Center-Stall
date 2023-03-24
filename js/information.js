@@ -123,12 +123,23 @@ $( document ).ready(function() {
             $('#face').attr('src', (images[$(this).val()].split("||"))[0]);
                 $('.description .name').html(names[$(this).val()]);
                 $('.description .caption').html(captions[$(this).val()]);
-                $('.description .origin_content').html(origins[$(this).val()]);
+                if ($(this).val() < 54) {
+                    $('.description .origin').css('display', 'block');
+                    $('.description .origin_content').html(origins[$(this).val()])
+                } else {
+                    $('.description .origin').css('display', 'none');
+                }
+                //$('.description .origin_content').html(origins[$(this).val()]);
                 $('.description .education_content').html(educations[$(this).val()]);
                 $('.description .service_content').html(services[$(this).val()]);
                 $('.description .rang_content').html(rangs[$(this).val()]);
                 $('.description .medal_content').html(medals[$(this).val()]);
-                $('.description .death_content').html(death[$(this).val()]);
+                if (death[$(this).val()] == ' \n') {
+                    $('.description .death').css('display', 'none')
+                } else {
+                    $('.description .death').css('display', 'block');
+                    $('.description .death_content').html(death[$(this).val()]);
+                }
                 if (getAmountImgs() <= 1 || getAmountImgs() == undefined) {
                     $('.arrows').css('display', 'none');
                     refresh();
