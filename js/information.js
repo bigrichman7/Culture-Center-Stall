@@ -152,7 +152,12 @@ $( document ).ready(function() {
                 $('#face').attr('src', (images[i].split("||"))[0]);
                 $('.description .name').html(names[i]);
                 $('.description .caption').html(captions[i]);
-                $('.description .origin_content').html(origins[i]);
+                if (currentGeneral < 54) {
+                    $('.description .origin').css('display', 'block');
+                    $('.description .origin_content').html(origins[i])
+                } else {
+                    $('.description .origin').css('display', 'none');
+                } 
                 $('.description .education_content').html(educations[i]);
                 $('.description .service_content').html(services[i]);
                 $('.description .rang_content').html(rangs[i]);
