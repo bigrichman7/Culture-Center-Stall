@@ -5,7 +5,7 @@
 
     .mainPlace {
         width: auto;
-        margin-top: 40px;
+        margin-top: 170px;
     }
 
     .logos {
@@ -37,7 +37,7 @@
     .mainButton {
         background-size: 50px 50px;
         font-size: 16px;
-        padding: 0 0 0 80px;
+        padding: 0 0 0 90px;
         width: 190px;
         height: 70px;
         background-position: 15px 10px;
@@ -141,13 +141,11 @@
     }
 
     .buttonPlace {
-        display: flex;
-        justify-content: center;
+        
     }
     .mainButton {
-        margin-right: 30px;
         margin-top: 15px;
         font-size: 22px;
-        width: 220px;
+        width: 320px;
     }
 }
